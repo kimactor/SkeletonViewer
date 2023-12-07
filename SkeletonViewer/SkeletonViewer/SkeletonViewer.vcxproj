@@ -20,6 +20,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\samples\SkeletonViewer.cpp" />
+    <ClCompile Include="..\..\src\ApplicationCanvas.cpp" />
+    <ClCompile Include="..\..\src\PointCloud.cpp" />
+    <ClCompile Include="..\..\src\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ApplicationCanvas.h" />
+    <ClInclude Include="..\..\src\dataStructure.h" />
+    <ClInclude Include="..\..\src\PointCloud.h" />
+    <ClInclude Include="..\..\src\Texture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -73,6 +82,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\props\eigen_3_3.props" />
     <Import Project="..\..\props\project_console_x64.props" />
+    <Import Project="..\..\props\gflags_release.props" />
+    <Import Project="..\..\props\glfw_3_3_8.props" />
+    <Import Project="..\..\props\glut_release.props" />
+    <Import Project="..\..\props\opencv48_cuda_release.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

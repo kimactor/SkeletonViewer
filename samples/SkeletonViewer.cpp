@@ -2,10 +2,27 @@
 //
 
 #include <iostream>
-
+#include "../src/ApplicationCanvas.h"
+#include <opencv2/opencv.hpp>
 int main()
 {
     std::cout << "Hello World!\n";
+    const int img_width = 1280;
+    const int img_height = 720;
+    const int pc_width = 960;
+    SkeletonViewerApplication::ApplicationCanvas app(img_width + pc_width, img_height, "SkeletonViewer");
+    while (app)
+    {
+        //app.show();
+        //app.show();
+        std::cout << " show " << std::endl;
+
+        if (cv::waitKey(1) == 'q')
+            break;
+    }
+
+    return 1;
+
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
