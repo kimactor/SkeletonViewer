@@ -41,6 +41,7 @@ namespace SkeletonViewerApplication
         float width() const { return float(_width); }
         float height() const { return float(_height); }
         void register_OPRS_glfw_callbacks();
+        int loadData(const std::string& data_path_, std::vector < std::vector<std::vector<float3>>>& vec_vec_pts);
         void show(const cv::Mat& frame, const int id, const rect& rect);
         void show(const std::vector<std::vector<float3>>& vec_vec_pts, const std::vector<float3>& vec_color, const int id, const rect& rect, const std::string& type = "Body_25");
 

@@ -203,10 +203,32 @@ namespace SkeletonViewerApplication
         t.render(frame, r);
     }
 
-    void ApplicationCanvas::render_point_cloud(const std::vector<std::vector<float3>>& vec_vec_pts, const std::vector<float3>& vec_color, const std::string& type, const int id, const rect& rect)
+    void ApplicationCanvas::render_point_cloud(const std::vector<std::vector<float3>>& vec_vec_pts, 
+        const std::vector<float3>& vec_color, const std::string& type, const int id, const rect& rect)
     {
         auto& t = _ptds[id];
         t.render(vec_vec_pts, vec_color, type, app_state, rect);
+    }
+
+
+    int ApplicationCanvas::loadData(const std::string& data_path_, std::vector<std::vector<std::vector<float3>>>& vec_vec_vec_pts)
+    {
+        cv::FileStorage fs(data_path_, cv::FileStorage::READ);
+        if (!fs.isOpened())
+            return 0;
+        cv::FileNode frame_fn = fs["BodyInfos"];
+        vec_vec_vec_pts.resize(frame_fn.size());
+        int frame_id = 0;
+        for (cv::FileNodeIterator f_it = frame_fn.begin(); f_it != frame_fn.end(); ++f_it)
+        {
+
+            cv::FileNode body_fn = (*f_it)["frameId"];
+            //for (cv::FileNodeIterator b_it = )
+            //{
+            //}
+        }
+
+        fs.release();
     }
 
 }   
