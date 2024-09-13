@@ -22,12 +22,18 @@
     <ClCompile Include="..\..\samples\SkeletonViewer.cpp" />
     <ClCompile Include="..\..\src\ApplicationCanvas.cpp" />
     <ClCompile Include="..\..\src\PointCloud.cpp" />
+    <ClCompile Include="..\..\src\SkeletonDetection.cpp" />
+    <ClCompile Include="..\..\src\SkeletonPainter.cpp" />
     <ClCompile Include="..\..\src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ApplicationCanvas.h" />
-    <ClInclude Include="..\..\src\dataStructure.h" />
+    <ClInclude Include="..\..\src\color_util.h" />
+    <ClInclude Include="..\..\src\DataStructure.h" />
     <ClInclude Include="..\..\src\PointCloud.h" />
+    <ClInclude Include="..\..\src\SkeletonData.h" />
+    <ClInclude Include="..\..\src\SkeletonDetection.h" />
+    <ClInclude Include="..\..\src\SkeletonPainter.h" />
     <ClInclude Include="..\..\src\Texture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

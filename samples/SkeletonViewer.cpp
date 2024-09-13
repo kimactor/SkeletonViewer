@@ -4,13 +4,26 @@
 #include <iostream>
 #include "../src/ApplicationCanvas.h"
 #include <opencv2/opencv.hpp>
+#include "../src/SkeletonDetection.h"
+
+using namespace SkeletonViewerApplication;
+
 int main()
 {
     std::cout << "Hello World!\n";
     const int img_width = 1280;
     const int img_height = 720;
     const int pc_width = 960;
+    const int camera_num = 5;
+    const std::string dataset = "seq_3";
     SkeletonViewerApplication::ApplicationCanvas app(img_width + pc_width, img_height, "SkeletonViewer");
+    std::vector<std::vector<SkeletonDetection>> SkelDete(camera_num);
+#pragma omp parallel for 
+    for (int i = 0; i < camera_num; ++i)
+    {
+        //SkelDete[i] = ParseDetections("./data/" + dataset + "/detection/" + );
+    }
+
     while (app)
     {
         //app.show();

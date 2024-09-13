@@ -5,9 +5,6 @@
 
 namespace SkeletonViewerApplication
 {
-
-
-
     struct float3 {
         float x, y, z;
         float3 operator*(float t)

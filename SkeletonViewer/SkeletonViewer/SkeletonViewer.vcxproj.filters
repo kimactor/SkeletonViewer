@@ -27,6 +27,12 @@
     <ClCompile Include="..\..\src\Texture.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\SkeletonDetection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SkeletonPainter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ApplicationCanvas.h">
@@ -38,7 +44,19 @@
     <ClInclude Include="..\..\src\Texture.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\dataStructure.h">
+    <ClInclude Include="..\..\src\SkeletonData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SkeletonDetection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\color_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SkeletonPainter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\DataStructure.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
